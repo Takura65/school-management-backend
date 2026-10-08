@@ -1,0 +1,28 @@
+{
+  "name": "school-management-backend",
+  "version": "1.0.0",
+  "description": "School Management System Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node config/server.js",
+    "dev": "nodemon --watch config --watch scripts --ext js,json,sql config/server.js",
+    "admin:create": "node scripts/createAdmin.js",
+    "admin:reset-password": "node scripts/resetAdminPassword.js",
+    "test": "node --test",
+    "client:dev": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
